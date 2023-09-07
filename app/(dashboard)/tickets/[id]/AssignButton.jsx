@@ -15,7 +15,7 @@ export default function AssignButton({ id }) {
 
     try {
       // Step 1: POST request to create an "Assigned" record
-      const assignedRes = await fetch("http://localhost:3000/api/assigned", {
+      const assignedRes = await fetch("/api/assigned", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(assigned),
