@@ -27,6 +27,7 @@ export default function AuthForm({ handleSubmit }) {
         />
       </label>
       <button className="btn-primary">Submit</button>
+      <span>test login with email: fizz@buzz.com , password:123</span>
     </form>
   );
 }
