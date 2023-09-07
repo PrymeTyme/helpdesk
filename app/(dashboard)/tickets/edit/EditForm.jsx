@@ -22,7 +22,7 @@ export default function EditForm({ ticket, id }) {
 
     console.log(updatetTicket);
     try {
-      const res = await fetch(`http://localhost:3000/api/tickets/${id}`, {
+      const res = await fetch(`/api/tickets/${id}`, {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(updatetTicket),
