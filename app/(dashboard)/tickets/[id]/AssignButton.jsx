@@ -34,14 +34,11 @@ export default function AssignButton({ id }) {
         is_assigned: true,
       };
 
-      const ticketUpdateRes = await fetch(
-        `http://localhost:3000/api/tickets/${id}?assign=true`,
-        {
-          method: "PUT",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify(ticketUpdate),
-        }
-      );
+      const ticketUpdateRes = await fetch(`/api/tickets/${id}?assign=true`, {
+        method: "PUT",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(ticketUpdate),
+      });
 
       if (!ticketUpdateRes.ok) {
         console.error(
